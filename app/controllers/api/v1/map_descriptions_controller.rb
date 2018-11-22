@@ -13,7 +13,7 @@ class Api::V1::MapDescriptionsController < ApplicationController
   private
 
   def map_description_params
-    params.permit(:title, :url)
+    params.permit(:map_id, :title, :text)
   end
 
   def find_map_description_description
