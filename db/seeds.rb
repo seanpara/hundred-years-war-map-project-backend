@@ -13,4 +13,6 @@ france_1399_description = MapDescription.create(map_id: 1, title: "France in 139
 
 france_1429 = Map.create(title:"France in 1429", url:"mapbox://styles/sean-para/cjooeq11s245t2spc490zj65f")
 
-france_1429_description = MapDescription.create(map_id: 2, title: "France in 1429", text: "This is where I will write a great description about France in 1429." )
+france_1429_description = MapDescription.create(map_id: 2, title: "France in 1429", text: "This is where I will write a great description about France in 1429.")
+
+agincourt = HistoricalEvent.create(title: "Agincourt", description: "Henry V kicked some ass", latitude: 50.4630, longitude: 2.1285, map_id: 2)
