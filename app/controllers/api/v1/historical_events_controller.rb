@@ -11,9 +11,9 @@ class Api::V1::HistoricalEventsController < ApplicationController
   end
 
   def create
-    byebug
-    @historical_event = HistoricalEvent.new(JSON.parse(historical_event_params[:historical_event]))
-    @historical_event.image.attach(historical_event_image_params[:image])
+    # byebug
+    @historical_event = HistoricalEvent.new(JSON.parse(historical_event_params["historical_event"]))
+    @historical_event.image.attach(historical_event_params["image"])
     if @historical_event.save
      render json: @historical_event, status: :ok
     else
@@ -23,10 +23,10 @@ class Api::V1::HistoricalEventsController < ApplicationController
 
   private
   def historical_event_params
-     params.permit(:title, :description, :latitude, :longitude, :map_id)
+     params.permit(:historical_event, :title, :description, :latitude, :longitude, :map_id, :image)
   end
 
-   def historical_event_image_params
-     params.permit(:image)
-   end
+   # def historical_event_image_params
+   #   params.permit(:image)
+   # end
 end

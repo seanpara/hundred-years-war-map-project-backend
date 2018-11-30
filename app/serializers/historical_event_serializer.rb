@@ -1,8 +1,9 @@
 class HistoricalEventSerializer < ActiveModel::Serializer
-  attributes :title, :description, :latitude, :longitude, :map_id, :image_url
+  include Rails.application.routes.url_helpers
+  attributes :id, :title, :description, :latitude, :longitude, :map_id, :image
   belongs_to :map
 
-  def image_url
-    rails_blob_path(object.image) if object.image.attachment
+  def image
+    return rails_blob_url(object.image)
   end
 end
