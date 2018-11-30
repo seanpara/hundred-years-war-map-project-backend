@@ -11,13 +11,14 @@ class Api::V1::HistoricalEventsController < ApplicationController
   end
 
   def create
-     @historical_event = HistoricalEvent.new(JSON.parse(historical_event_params[:historical_event]))
-     @historical_event.image.attach(historical_event_image_params[:image])
-     if @historical_event.save
-       render json: @historical_event, status: :ok
-     else
-       render json: nil, status: 500
-     end
+    byebug
+    @historical_event = HistoricalEvent.new(JSON.parse(historical_event_params[:historical_event]))
+    @historical_event.image.attach(historical_event_image_params[:image])
+    if @historical_event.save
+     render json: @historical_event, status: :ok
+    else
+     render json: nil, status: 500
+    end
   end
 
   private
