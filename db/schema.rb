@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_30_204026) do
+ActiveRecord::Schema.define(version: 2018_12_03_200027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2018_11_30_204026) do
   create_table "historical_events", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.integer "latitude"
-    t.integer "longitude"
+    t.float "latitude"
+    t.float "longitude"
     t.integer "map_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2018_11_30_204026) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "year"
   end
 
 end

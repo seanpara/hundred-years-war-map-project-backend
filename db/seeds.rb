@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-france_1399 = Map.create(title:"France in 1399", url:"mapbox://styles/sean-para/cjoyxpl7l1r6x2rmhh5xa7gsf")
+france_1399 = Map.create(title:"France in 1399", year: 1399, url:"mapbox://styles/sean-para/cjoyxpl7l1r6x2rmhh5xa7gsf")
 
 france_1399_description = MapDescription.create(map_id: 1, title: "France in 1399", text: "This is where I will write a great description about France in 1399." )
 
-france_1429 = Map.create(title:"France in 1429", url:"mapbox://styles/sean-para/cjooeq11s245t2spc490zj65f")
+france_1429 = Map.create(title:"France in 1429", year: 1429, url:"mapbox://styles/sean-para/cjooeq11s245t2spc490zj65f")
 
 france_1429_description = MapDescription.create(map_id: 2, title: "France in 1429", text: "This is where I will write a great description about France in 1429.")
 
