@@ -42,6 +42,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+gem "figaro"
 
+# gem 'aws-sdk', '~> 2.3'
+
+gem "aws-sdk-s3", require: false
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

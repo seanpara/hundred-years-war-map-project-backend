@@ -4,6 +4,7 @@ class HistoricalEventSerializer < ActiveModel::Serializer
   belongs_to :map
 
   def image
+    # byebug
     return rails_blob_url(object.image)
   end
 end
