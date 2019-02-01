@@ -5,6 +5,6 @@ class HistoricalEventSerializer < ActiveModel::Serializer
 
   def image
     # byebug
-    return rails_blob_url(object.image)
+    return url_for(object.image)
   end
 end
